@@ -14,9 +14,7 @@
     "express": "4.15.2",
     "body-parser": "1.17.2",
     "consolidate": "*",
-    "dust": "*",
-    "dustjs-helpers": "*",
-    "dustjs-linkedin": "*",
+    "ejs":"2.5.7",
     
     "pg": "*"
 
