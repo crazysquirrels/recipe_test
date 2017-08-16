@@ -10,10 +10,10 @@ var connect = "postgres://mijswudcvxfgif:4bfebe8d5e7f9d360439460e8d4bf871501ae86
 
 //var connect ="postgres://alban:Visa52197@localhost:5432/recipebookdb";
 //Assign Dust Engine to .dust files
-app.engine('dust', cons.dust);
-
+//app.engine('dust', cons.dust);
+app.set('view engine', 'ejs');
 //Set Default Ext .dust
-app.set('view engine', 'dust');
+//app.set('view engine', 'dust');
 app.set('views', __dirname +'/views');
 
 //Set public folder
