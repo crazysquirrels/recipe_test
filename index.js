@@ -1,7 +1,6 @@
 var express = require('express');
 var app = express();
 var pg = require('pg');
-var path = require('path');
 var bodyParser = require('body-parser');
 
 app.set('port', (process.env.PORT || 5000));
@@ -21,7 +20,7 @@ app.get('/', function(request, response) {
       client.query('SELECT * FROM recipes', function(err, result) {
         if (err) throw err;
         // just print the result to the console
-        console.log(result.rows[0]); // outputs: { name: 'brianc' }
+        console.log(result); // outputs: { name: 'brianc' }
         // disconnect the client
         client.end(function(err) {
             if (err) throw err;
