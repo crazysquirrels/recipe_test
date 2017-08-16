@@ -8,6 +8,7 @@ var express = require('express'),
 //DB Connect String
 var connect = "postgres://mijswudcvxfgif:4bfebe8d5e7f9d360439460e8d4bf871501ae8671e8766e098ebdfdc0604a301@ec2-23-23-227-188.compute-1.amazonaws.com:5432/da6en3ip038jf8";
 
+//var connect ="postgres://alban:Visa52197@localhost:5432/recipebookdb";
 //Assign Dust Engine to .dust files
 app.engine('dust', cons.dust);
 
@@ -23,6 +24,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
 app.get('/', function(req, res){
+   
     var client = new pg.Client(connect);
         client.connect(function(err) {
             if (err) throw err;
